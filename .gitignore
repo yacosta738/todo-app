@@ -1,0 +1,9 @@
+node_modules
+*.log
+.nuxt
+nuxt.d.ts
+.output
+
+.idea
+/tests/e2e/videos/
+/tests/e2e/screenshots/
