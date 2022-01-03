@@ -4,6 +4,6 @@ describe('Homepage', () => {
   it('Shows correct text', () => {
     cy.visit('/')
 
-    cy.contains('h1', 'Nuxt 3 Starter Ki')
+    cy.contains('h1', 'Todo App')
   })
 })
