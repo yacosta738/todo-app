@@ -4,6 +4,6 @@ describe('Homepage', () => {
   it('Shows correct text', () => {
     cy.visit('/')
 
-    cy.contains('h1', 'Todo App')
+    cy.contains('h1', '#todo')
   })
 })
