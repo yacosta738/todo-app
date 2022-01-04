@@ -4,7 +4,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "yarn build && node .output/server/index.mjs",
-    "test": "start-server-and-test start http://localhost:3000 test:ci",
+    "test": "start-server-and-test 'yarn start' http://localhost:3000 'yarn test:ci'",
     "test:ci": "yarn e2e:silent",
     "e2e": "cypress open --browser chrome",
     "e2e:silent": "cypress run"
