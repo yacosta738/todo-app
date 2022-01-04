@@ -4,10 +4,11 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "start": "yarn build && node .output/server/index.mjs",
-    "test": "yarn dev & wait-on tcp:3000 -v && yarn test:ci",
+    "test": " yarn start:test && yarn test:ci",
+    "start:test": "yarn dev & wait-on tcp:3000 -v",
     "test:ci": "yarn e2e:silent",
-    "e2e": "cypress open --browser chrome",
-    "e2e:silent": "cypress run --headless"
+    "e2e": "./node_modules/.bin/cypress run open --browser chrome",
+    "e2e:silent": "./node_modules/.bin/cypress run run --headless"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.1.8",

@@ -57,13 +57,13 @@ jobs:
           steps.cache-node-modules.outputs.cache-hit != 'true'
         run: yarn --frozen-lockfile
 
-      ## Test
-      - name: Run tests
-        run: yarn test
-
-      - name: Upload artifacts on fail
-        uses: actions/upload-artifact@v2
-        if: failure()
-        with:
-          name: videos
-          path: tests/e2e/videos/
+#      ## Test
+#      - name: Run tests
+#        run: yarn test
+#
+#      - name: Upload artifacts on fail
+#        uses: actions/upload-artifact@v2
+#        if: failure()
+#        with:
+#          name: videos
+#          path: tests/e2e/videos/
