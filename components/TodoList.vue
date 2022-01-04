@@ -4,9 +4,14 @@
       <TodoItem :id="todo.id" :key="todo.id" v-for="todo in todoList" :todo="todo"></TodoItem>
     </ul>
     <div class="flex flex-row justify-end items-end my-2">
-      <button class="px-8 py-2 mx-4 bg-red-500 text-gray-100 text-lg rounded-md focus:border-4 border-red-300"
-              v-if="tabsStore.activeTab === Tab.Completed" @click="todoStore.removeAllTodos()">
-        Add
+      <button
+          class="px-8 py-1 mx-4 flex justify-between items-center bg-red-500 text-gray-100 text-lg rounded focus:border-4 border-red-300"
+          v-if="tabsStore.activeTab === Tab.Completed" @click="todoStore.removeAllTodos()">
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+          <path fill="currentColor"
+                d="M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19M8,9H16V19H8V9M15.5,4L14.5,3H9.5L8.5,4H5V6H19V4H15.5Z"/>
+        </svg>
+        delete all
       </button>
     </div>
   </div>

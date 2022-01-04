@@ -4,8 +4,8 @@
       <div class="header">
         <div class="container">
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-4xl font-black">
-              Todo App
+            <h1 class="title">
+              #todo
             </h1>
           </div>
         </div>
@@ -13,7 +13,7 @@
     </template>
     <template #todo>
       <Tabs/>
-      <AddTodoItem/>
+      <AddTodoItem v-if="tabsStore.activeTab !== Tab.Completed"/>
       <TodoList/>
     </template>
   </NuxtLayout>
@@ -21,11 +21,19 @@
 
 <script setup lang="ts">
 import {onMounted} from 'vue';
-import {useTodoStore} from '@/store'
+import {Tab} from "~/model/tab.model";
+import {useTodoStore, useTabsStore} from '@/store'
 
 const todoStore = useTodoStore();
+const tabsStore = useTabsStore();
 onMounted(() => {
   todoStore.readTodos();
 })
-
 </script>
+
+<style lang="scss" scoped>
+.title {
+  font-family: "Raleway", sans-serif;
+  @apply text-center text-5xl;
+}
+</style>
