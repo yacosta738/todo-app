@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ul class="flex flex-col justify-start items-start my-4">
+    <ul id="all-todos" class="flex flex-col justify-start items-start my-4">
       <TodoItem :id="todo.id" :key="todo.id" v-for="todo in todoList" :todo="todo"></TodoItem>
     </ul>
     <div class="flex flex-row justify-end items-end my-2">
