@@ -48,8 +48,8 @@ describe('Completed Tab', () => {
 
         cy.contains('li', 'Completed').click()
 
-        // the ul with id 'all-todos' should have 0 elements
-        cy.get('ul#all-todos').should('have.length', 0)
+        // the ul with id 'all-todos' should have 1 elements
+        cy.get('ul#all-todos').should('have.length', 1)
     })
 })
 
