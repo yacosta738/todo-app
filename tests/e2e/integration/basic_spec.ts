@@ -8,8 +8,8 @@ describe('Homepage', () => {
   })
 })
 
-describe('Add todo', () => {
-  it('Adds a todo', () => {
+describe('Todos', () => {
+  it('Add a todo', () => {
     cy.visit('/')
 
     cy.get('input[name=todo]').type('Buy milk')
@@ -17,4 +17,21 @@ describe('Add todo', () => {
 
     cy.contains('li', 'Buy milk')
   })
+
+  it('Check a todo', () => {
+    cy.visit('/')
+
+    cy.get('input[name=todo]').type('Buy beer')
+    cy.get('button[type=submit]').click()
+
+    cy.contains('li', 'Buy beer')
+
+    // Select the checkbox with label "Buy beer"
+    cy.get('input[type=checkbox]').check()
+
+    // Check that the todo is checked
+    cy.get('input[type=checkbox]').should('be.checked')
+  })
 })
+
+
