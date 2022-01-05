@@ -48,7 +48,7 @@ describe('Completed Tab', () => {
 
         cy.get('li[name=Completed]').click()
 
-        cy.contains('li', 'Buy milk').should('be.visible')
+        cy.contains('li', 'Buy milk').should('not.be.visible')
 
         cy.contains('li', 'Buy beer').should('not.be.visible')
     })
