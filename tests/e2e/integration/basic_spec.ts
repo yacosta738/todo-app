@@ -46,7 +46,7 @@ describe('Completed Tab', () => {
 
         cy.get('input[type=checkbox]').check()
 
-        cy.get('li[name=Completed]').click()
+        cy.contains('li', 'Completed').click()
 
         cy.contains('li', 'Buy milk').should('not.be.visible')
 
