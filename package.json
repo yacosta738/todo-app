@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",
-    "cypress": "^9.2.0",
+    "cypress": "^10.7.0",
     "nuxt3": "^3.0.0-27238235.a1bcc53",
     "postcss": "^8.3.11",
     "sass": "^1.43.4",
