@@ -10,7 +10,7 @@
     "e2e:silent": "cypress run"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.1.8",
+    "@pinia/nuxt": "^0.4.2",
     "@vueuse/core": "^7.4.1",
     "pinia": "^2.0.9"
   },
